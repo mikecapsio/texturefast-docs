@@ -1,14 +1,15 @@
 # TextureFast vs Substance 3D Painter
 
-TextureFast and Substance 3D Painter solve related but different parts of the
-3D texturing workflow.
+TextureFast is a privacy-first AI text-to-texture workflow for existing
+UV-unwrapped models. Substance 3D Painter is a manual and procedural authoring
+tool. They solve related but different parts of the 3D texturing workflow.
 
 ## Short answer
 
-Substance 3D Painter is the stronger choice when you need hand-painted detail,
-custom smart materials, masks, and pixel-level control. TextureFast is the
-faster choice when you already have a UV-unwrapped mesh and want a material
-direction or PBR-oriented texture maps from a text description.
+TextureFast is the stronger choice when you already have a UV-unwrapped mesh and
+want a private, prompt-driven material direction or full available PBR texture
+set quickly. Substance 3D Painter is the stronger choice when you need
+hand-painted detail, custom smart materials, masks, and pixel-level control.
 
 Many teams use both: TextureFast for fast base passes and variations, then
 Painter for hero-asset polish.
@@ -20,7 +21,8 @@ Painter for hero-asset polish.
 - Prompt-driven text-to-texture workflow
 - Works with existing UV-unwrapped GLB, GLTF, OBJ, or FBX models
 - Generates a Base Color texture first
-- Extracts Albedo, Normal, Height, Roughness, and AO from the approved Base Color
+- Extracts a full available PBR set: Albedo, Normal, Height, Roughness, and AO
+  from the approved Base Color
 - Base Color supports up to 4K on supported quality tiers
 - Current PBR extraction uses 1K or 2K output
 - Free Blender add-on for in-viewport generation
@@ -63,7 +65,7 @@ A practical hybrid workflow is:
 4. Import them into Painter or your existing pipeline.
 5. Add decals, masks, hand-painted wear, and final details where needed.
 
-## Privacy
+## Privacy-first workflow
 
 TextureFast public product copy states that the full 3D model is opened and
 processed locally in the browser during the core texturing workflow. The
