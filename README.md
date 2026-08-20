@@ -1,8 +1,10 @@
 # TextureFast Public Documentation
 
-TextureFast is an AI texture-generation tool for existing, UV-unwrapped 3D models.
-Describe the material you want, generate a Base Color texture, preview it on the
-model, and export standard PNG maps for your 3D or game-development workflow.
+TextureFast is a privacy-first AI texture-generation tool for existing,
+UV-unwrapped 3D models. Describe the material you want, generate a Base Color
+texture, extract the full currently available PBR texture set — Albedo, Normal,
+Height, Roughness, and Ambient Occlusion — preview it on the model, and export
+standard PNG maps for your 3D or game-development workflow.
 
 TextureFast focuses on texturing existing geometry. It does not generate complete
 3D meshes from scratch.
@@ -24,7 +26,7 @@ TextureFast focuses on texturing existing geometry. It does not generate complet
 - Describe the material, color, wear, and visual style in plain language.
 - Use style presets such as AAA Photorealistic, Handpainted, Pixel Art, or AAA Stylized.
 - Generate a Base Color texture and inspect it on the model.
-- Extract PBR-oriented maps from the approved Base Color.
+- Extract a full available PBR texture set from the approved Base Color.
 - Download individual PNG files or a material package where available.
 - Use the output in Blender, Unity, Unreal Engine, Godot, and other tools that
   accept standard texture maps.
