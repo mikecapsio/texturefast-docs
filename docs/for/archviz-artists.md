@@ -1,21 +1,21 @@
 # TextureFast for ArchViz Artists
 
 TextureFast is a privacy-first AI texture generator for ArchViz artists. It
-turns UV-mapped architectural models into Base Color textures and a full
-available PBR texture set — Albedo, Normal, Height, Roughness, and Ambient
+turns UV-mapped architectural models into Base Color textures and a full PBR
+texture set — Albedo, Normal, Height, Roughness, Metallic, and Ambient
 Occlusion — for common visualization workflows.
 
 ArchViz projects depend on believable materials: wood, stone, marble, metal,
 fabric, concrete, and glass. TextureFast lets artists explore those directions
 quickly while keeping the full model local during the core browser workflow.
 
-## What TextureFast helps with
+## What TextureFast delivers
 
 - Fast exploration of wood, stone, metal, fabric, and concrete finishes
 - Material variations for client presentations
 - Consistent material direction across rooms, furniture, and architectural
   elements
-- Full available PBR exports for Blender, 3ds Max, V-Ray, Corona, Cycles, and other
+- Full PBR exports for Blender, 3ds Max, V-Ray, Corona, Cycles, and other
   compatible workflows
 - Prompt-driven revision cycles without searching a stock library for every
   change
@@ -48,9 +48,10 @@ GLB is recommended when you want a single self-contained file.
 Open the TextureFast texturing workflow and upload the UV-unwrapped model.
 Review the model in the browser before generating.
 
-The core workflow opens the full model locally for preview and UV handling.
-The selected generation feature may process derived inputs such as the UV
-layout, prompt, reference image, Base Color, or generated map data.
+TextureFast uses a privacy-first workflow: the full model stays local for
+preview and UV handling. Generation uses derived inputs such as the UV layout,
+prompt, reference image, Base Color, or generated map data required by the
+selected feature.
 
 ### 2. Prompt by design intent
 
@@ -89,7 +90,7 @@ Compare:
 If a client asks for “warmer wood” or “less gloss,” revise the prompt and
 generate a new direction on the same UV layout.
 
-### 4. Extract the available PBR maps
+### 4. Extract the full PBR map set
 
 After selecting a Base Color, use the PBR Material workflow to generate:
 
@@ -97,14 +98,11 @@ After selecting a Base Color, use the PBR Material workflow to generate:
 - Normal
 - Height
 - Roughness
+- Metallic
 - Ambient Occlusion
 
-Current PBR extraction uses 1K or 2K output. Base Color can reach up to 4K on
-supported quality tiers.
-
-Metallic extraction is currently marked as coming soon. For bronze, steel,
-aluminum, or other metal surfaces, set or refine the Metallic value in the
-target renderer or DCC.
+Base Color can reach up to 4K on supported quality tiers. Check the live
+product UI for current plan access, limits, and resolution options.
 
 ### 5. Import into the renderer
 
@@ -114,6 +112,7 @@ PNG maps can be imported into standard renderer workflows:
 - Normal → normal or bump input
 - Roughness → roughness or glossiness workflow, with the required inversion
 - Height → displacement or bump workflow where appropriate
+- Metallic → metalness input
 - AO → subtle occlusion treatment when the renderer supports it
 
 Renderer conventions differ. For example, some workflows use Glossiness
@@ -135,8 +134,8 @@ final scene.
 
 ## Client revision workflow
 
-TextureFast is useful when the geometry and UVs stay the same while the material
-direction changes:
+TextureFast is built for cases where the geometry and UVs stay the same while
+the material direction changes:
 
 1. Generate a baseline material.
 2. Render a quick lighting test.
@@ -160,9 +159,9 @@ production assets and follow the client's confidentiality requirements.
 
 ## Privacy and NDA work
 
-TextureFast public product copy states that the full 3D model is opened and
-handled locally in the browser during the core texturing workflow. It also
-states that creative assets are not used to train AI models.
+TextureFast uses a privacy-first workflow: the full 3D model is opened and
+handled locally in the browser during the core texturing workflow. TextureFast
+does not use creative assets to train AI models.
 
 This is useful for projects involving unreleased products or client work, but
 it is not a replacement for reviewing the current Privacy Policy, Terms of
@@ -180,8 +179,9 @@ source of truth.
 Use a scanned-material library when an existing scan matches the project
 better than a generated direction.
 
-TextureFast fits the material exploration and variation stage, and can work
-alongside each of these tools.
+TextureFast is the material-exploration and variation layer; it works alongside
+each of these tools when manual control, reference fidelity, or scanned assets
+are required.
 
 ## Recommended starting workflow
 
