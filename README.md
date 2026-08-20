@@ -1,6 +1,6 @@
 # TextureFast Public Documentation
 
-TextureFast is a privacy-first AI texture-generation tool for existing,
+TextureFast is a privacy-first AI texture generator for existing,
 UV-unwrapped 3D models. Describe the material you want, generate a Base Color
 texture, extract the full currently available PBR texture set — Albedo, Normal,
 Height, Roughness, and Ambient Occlusion — preview it on the model, and export
