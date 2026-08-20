@@ -2,8 +2,8 @@
 
 TextureFast is a privacy-first AI texturing workflow for existing 3D models.
 Start with a clean UV unwrap, describe the material, and generate a Base Color
-texture plus the full available PBR texture set — Albedo, Normal, Height,
-Roughness, and Ambient Occlusion — for your DCC or engine.
+texture plus a full PBR texture set — Albedo, Normal, Height, Roughness,
+Metallic, and Ambient Occlusion — for your DCC or engine.
 
 The basic workflow is:
 
@@ -11,7 +11,7 @@ The basic workflow is:
 2. Open the texturing workflow.
 3. Describe the material.
 4. Generate and review Base Color.
-5. Extract the available PBR maps.
+5. Extract the full PBR map set.
 6. Download and import them into your DCC or engine.
 
 ## Before you start
@@ -129,20 +129,19 @@ tokens on secondary map extraction.
 
 ## Step 6: Extract PBR maps
 
-After approving Base Color, open the PBR Material workflow. The current live
-map set is:
+After approving Base Color, open the PBR Material workflow. TextureFast
+generates:
 
 - Albedo / Base Color
 - Normal
 - Height
 - Roughness
+- Metallic
 - Ambient Occlusion
 
 You can generate maps individually or use one-click full material generation on
-eligible plans. Current PBR extraction uses 1K or 2K output.
-
-Metallic extraction is currently marked as coming soon. If your target shader
-needs a Metallic map, create or refine that channel in your DCC or engine.
+eligible plans. Check the live product UI for current plan access, limits, and
+resolution options.
 
 ## Step 7: Download the maps
 
@@ -159,7 +158,8 @@ In Blender, assign the maps to the Principled BSDF:
 
 - Base Color / Albedo → Base Color
 - Normal → Normal Map node, then Normal
-- Roughness → Roughness
+- Roughness → Roughness or Smoothness, according to the shader
+- Metallic → Metallic
 - Height → Bump or displacement workflow if needed
 - AO → optional occlusion treatment depending on the shader
 
@@ -206,8 +206,8 @@ it only from a thumbnail.
 
 ## Step 11: Iterate and refine
 
-TextureFast is useful for exploring directions quickly, but final judgment
-still belongs in the target application.
+TextureFast is built for exploring directions quickly. Final validation still
+belongs in the target application.
 
 Use a loop:
 
@@ -245,9 +245,8 @@ texture on the model and in the target renderer.
 
 ### A required map is missing
 
-Check current plan access and the live PBR Material tab. Metallic extraction is
-currently marked as coming soon, and PBR extraction uses different resolution
-limits from Base Color generation.
+Check current plan access and the live PBR Material tab if a map or resolution
+option is unavailable.
 
 ## Next steps
 
