@@ -6,9 +6,9 @@
 
 TextureFast is a privacy-first AI texture generator for existing UV-unwrapped
 3D models. Upload a model, describe the desired material, generate a Base Color
-texture, extract the full available PBR texture set — Albedo, Normal, Height,
-Roughness, and Ambient Occlusion — preview it on the model, and download
-standard PNG maps for common 3D tools and game engines.
+texture, extract a full PBR texture set — Albedo, Normal, Height, Roughness,
+Metallic, and Ambient Occlusion — preview it on the model, and download
+production-ready PNG maps for common 3D tools and game engines.
 
 TextureFast focuses on texturing existing geometry. It does not generate
 complete 3D meshes from scratch.
@@ -22,7 +22,7 @@ TextureFast uses a two-stage privacy-first workflow:
 3. Choose a style preset and quality or resolution option.
 4. Generate a Base Color texture.
 5. Review the result on the 3D model.
-6. Extract the full available PBR map set from the approved Base Color.
+6. Extract the full PBR map set from the approved Base Color.
 7. Download individual PNG maps or a material package where available.
 
 ### Who uses TextureFast?
@@ -76,19 +76,16 @@ Base Color, also called Albedo or Diffuse in some workflows, contains the
 surface color without lighting or shine baked into it. It is the foundation for
 the PBR extraction workflow.
 
-### What PBR maps are currently available?
+### What PBR maps does TextureFast generate?
 
-The current live PBR extraction workflow provides:
+TextureFast generates a full PBR texture set:
 
 - **Albedo / Base Color:** surface color without lighting
 - **Normal:** small surface-direction detail without extra geometry
 - **Height:** elevation information for parallax or displacement workflows
 - **Roughness:** how matte or glossy the surface appears
+- **Metallic:** whether a surface behaves as metal or a non-metal
 - **Ambient Occlusion:** soft contact shadowing in creases and corners
-
-Metallic extraction is currently marked as coming soon in the product UI.
-Workflows that need a Metallic map should create or refine that channel in
-Blender, Substance, Photoshop, or the target engine.
 
 ### How do I get Normal or Roughness maps?
 
@@ -98,10 +95,9 @@ one-click full material generation on eligible plans.
 
 ### What resolution can I use?
 
-Base Color can reach up to 4K on supported quality tiers. Current PBR
-extraction uses 1K or 2K output. Resolution availability depends on the active
-plan and selected workflow, so check the live dashboard before planning a
-batch.
+Base Color can reach up to 4K on supported quality tiers. Check the live
+dashboard for current plan access, limits, and resolution options before
+planning a batch.
 
 ### What are style presets?
 
@@ -132,18 +128,17 @@ before export.
 
 ### Is my 3D model uploaded?
 
-TextureFast public product copy states that the full 3D model file is opened
-and processed locally in the browser during the core texturing workflow. The
-service may process derived or user-provided inputs needed by the selected
-feature, such as the UV layout, prompt, reference image, Base Color, or
-generated map data.
+TextureFast uses a privacy-first workflow: the full 3D model file is opened and
+processed locally in the browser during the core texturing workflow. Generation
+uses the derived or user-provided inputs required by the selected feature, such
+as the UV layout, prompt, reference image, Base Color, or generated map data.
 
 Read the current Privacy Policy for the authoritative details.
 
 ### Are prompts or assets used to train AI models?
 
-TextureFast public product copy states that user creative assets are not used
-to train AI models. Do not put passwords or other secrets in prompts, and
+TextureFast does not use user creative assets to train AI models. Do not put
+passwords or other secrets in prompts, and
 review your studio or client policy before using confidential material.
 
 ## Blender and game engines
