@@ -2,7 +2,7 @@
 
 TextureFast is a privacy-first AI texture generator for existing UV-unwrapped
 3D models. It turns a material description into a Base Color texture and a full
-available PBR texture set — Albedo, Normal, Height, Roughness, and Ambient
+PBR texture set — Albedo, Normal, Height, Roughness, Metallic, and Ambient
 Occlusion — ready for common 3D and game workflows.
 
 There is no single best tool for every texturing job. The right choice depends
@@ -12,8 +12,8 @@ material from a photograph, or need to generate geometry and texture together.
 ## Quick answer
 
 - Choose **TextureFast** when you already have a UV-unwrapped model and want
-  privacy-first prompt-driven generation, fast variations, and a full available
-  PBR PNG map set.
+  privacy-first prompt-driven generation, fast variations, and a full PBR PNG
+  map set.
 - Choose **Substance 3D Painter** when you need pixel-level painting, custom
   smart materials, masks, and procedural control.
 - Choose **Substance 3D Sampler** when a photograph or physical material is the
@@ -33,7 +33,7 @@ mutually exclusive.
 TextureFast is designed specifically for the texturing step. You bring a
 UV-unwrapped GLB, GLTF, OBJ, or FBX model, describe the material, and generate a
 Base Color texture. You can preview the result on the model before downloading
-the full available PBR map set.
+the full PBR map set.
 
 The current PBR extraction workflow provides:
 
@@ -41,13 +41,13 @@ The current PBR extraction workflow provides:
 - Normal
 - Height
 - Roughness
+- Metallic
 - Ambient Occlusion
 
-Base Color supports up to 4K on supported quality tiers. Current PBR extraction
-uses 1K or 2K output. Metallic extraction is marked as coming soon in the live
-product.
+Base Color supports up to 4K on supported quality tiers. Check the live product
+UI for current plan gates, limits, and resolution options.
 
-TextureFast is a strong fit for:
+TextureFast is built for:
 
 - Rapid game-asset iteration
 - Indie teams and environment production
