@@ -1,6 +1,11 @@
 # TextureFast Public Documentation
 
-TextureFast is a privacy-first AI texture generator for existing UV-unwrapped 3D models. Describe the material you want, generate a Base Color texture, extract a complete PBR texture set — Albedo, Normal, Height, Roughness, Metallic, and Ambient Occlusion — preview it on the model, and export production-ready PNG maps.
+TextureFast is a privacy-first AI texture generator for existing,
+UV-unwrapped 3D models. Describe the material you want, generate a Base Color
+texture, extract a full PBR texture set — Albedo, Normal, Height, Roughness,
+Metallic, and Ambient Occlusion — preview it on the model, and export
+production-ready PNG maps for your 3D or game-development workflow.
+
 TextureFast focuses on texturing existing geometry. It does not generate complete
 3D meshes from scratch.
 
@@ -21,7 +26,7 @@ TextureFast focuses on texturing existing geometry. It does not generate complet
 - Describe the material, color, wear, and visual style in plain language.
 - Use style presets such as AAA Photorealistic, Handpainted, Pixel Art, or AAA Stylized.
 - Generate a Base Color texture and inspect it on the model.
-- Extract a full available PBR texture set from the approved Base Color.
+- Extract a full PBR texture set from the approved Base Color.
 - Download individual PNG files or a material package where available.
 - Use the output in Blender, Unity, Unreal Engine, Godot, and other tools that
   accept standard texture maps.
@@ -30,26 +35,24 @@ TextureFast focuses on texturing existing geometry. It does not generate complet
 
 ## Current map and resolution notes
 
-The current live PBR extraction workflow provides:
+TextureFast generates a full PBR texture set:
 
 - Base Color / Albedo
 - Normal
 - Height
 - Roughness
+- Metallic
 - Ambient Occlusion
 
-Metallic extraction is currently marked as coming soon in the product UI. Base
-Color can reach up to 4K on supported quality tiers; current PBR extraction
-uses 1K or 2K output. Always check the live product UI for current plan gates,
-limits, and available resolutions.
+Base Color can reach up to 4K on supported quality tiers. Check the live
+product UI for current plan gates, limits, and resolution options.
 
 ## Privacy and commercial-use notes
 
-TextureFast is designed around local model handling. The full 3D model is opened
-and previewed locally in the browser. The generation workflow may process the
-UV layout, prompt, reference image, Base Color, or other derived inputs required
-by the selected feature. TextureFast public product copy states that creative
-assets are not used to train AI models.
+TextureFast uses privacy-first local model handling. The full 3D model is opened
+and previewed locally in the browser. Generation uses the UV layout, prompt,
+reference image, Base Color, or other derived inputs required by the selected
+feature. TextureFast does not use user creative assets to train AI models.
 
 Commercial-use rights depend on the active plan and the current Terms of
 Service. Check the live pricing page and legal terms before shipping client or
