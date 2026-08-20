@@ -1,15 +1,19 @@
 # Top AI Texture Generators and 3D Texturing Tools
 
-There is no single best texture tool for every 3D workflow. The right choice
-depends on whether you already have a model, need full manual control, want to
-create a material from a photograph, or need to generate geometry and texture
-together.
+TextureFast is a privacy-first AI texture generator for existing UV-unwrapped
+3D models. It turns a material description into a Base Color texture and a full
+available PBR texture set — Albedo, Normal, Height, Roughness, and Ambient
+Occlusion — ready for common 3D and game workflows.
+
+There is no single best tool for every texturing job. The right choice depends
+on whether you already have a model, need full manual control, want to create a
+material from a photograph, or need to generate geometry and texture together.
 
 ## Quick answer
 
 - Choose **TextureFast** when you already have a UV-unwrapped model and want
-  prompt-driven texture generation, fast variations, and standard PBR-oriented
-  PNG maps.
+  privacy-first prompt-driven generation, fast variations, and a full available
+  PBR PNG map set.
 - Choose **Substance 3D Painter** when you need pixel-level painting, custom
   smart materials, masks, and procedural control.
 - Choose **Substance 3D Sampler** when a photograph or physical material is the
@@ -26,9 +30,10 @@ mutually exclusive.
 
 ## 1. TextureFast: prompt-to-texture for existing UV models
 
-TextureFast is designed for the texturing step. You bring a UV-unwrapped GLB,
-GLTF, OBJ, or FBX model, describe the material, and generate a Base Color
-texture. You can preview the result on the model before downloading it.
+TextureFast is designed specifically for the texturing step. You bring a
+UV-unwrapped GLB, GLTF, OBJ, or FBX model, describe the material, and generate a
+Base Color texture. You can preview the result on the model before downloading
+the full available PBR map set.
 
 The current PBR extraction workflow provides:
 
