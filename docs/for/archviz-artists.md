@@ -1,13 +1,13 @@
 # TextureFast for ArchViz Artists
 
-ArchViz projects depend on believable materials: wood, stone, marble, metal,
-fabric, concrete, and glass. Client revisions can make material sourcing
-expensive when every change requires a new scan, a new asset purchase, or
-another manual texturing pass.
+TextureFast is a privacy-first AI texture generator for ArchViz artists. It
+turns UV-mapped architectural models into Base Color textures and a full
+available PBR texture set — Albedo, Normal, Height, Roughness, and Ambient
+Occlusion — for common visualization workflows.
 
-TextureFast helps ArchViz artists explore material directions on their own
-UV-mapped models and export standard PNG maps for common visualization
-workflows.
+ArchViz projects depend on believable materials: wood, stone, marble, metal,
+fabric, concrete, and glass. TextureFast lets artists explore those directions
+quickly while keeping the full model local during the core browser workflow.
 
 ## What TextureFast helps with
 
@@ -15,7 +15,7 @@ workflows.
 - Material variations for client presentations
 - Consistent material direction across rooms, furniture, and architectural
   elements
-- PBR-oriented exports for Blender, 3ds Max, V-Ray, Corona, Cycles, and other
+- Full available PBR exports for Blender, 3ds Max, V-Ray, Corona, Cycles, and other
   compatible workflows
 - Prompt-driven revision cycles without searching a stock library for every
   change
