@@ -55,8 +55,8 @@ the result to the UV layout you provide.
 ## Why use TextureFast if Meshy already creates textures?
 
 Meshy is designed to move quickly from an idea to a complete asset. TextureFast
-is useful when the asset already has a usable mesh and the texture is the
-bottleneck.
+is the right choice when the asset already has a usable mesh and the texture is
+the bottleneck.
 
 TextureFast gives you:
 
