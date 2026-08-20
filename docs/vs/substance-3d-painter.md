@@ -7,8 +7,8 @@ tool. They solve related but different parts of the 3D texturing workflow.
 ## Short answer
 
 TextureFast is the stronger choice when you already have a UV-unwrapped mesh and
-want a private, prompt-driven material direction or full available PBR texture
-set quickly. Substance 3D Painter is the stronger choice when you need
+want a private, prompt-driven full PBR texture set quickly. Substance 3D Painter
+is the stronger choice when you need
 hand-painted detail, custom smart materials, masks, and pixel-level control.
 
 Many teams use both: TextureFast for fast base passes and variations, then
@@ -21,10 +21,9 @@ Painter for hero-asset polish.
 - Prompt-driven text-to-texture workflow
 - Works with existing UV-unwrapped GLB, GLTF, OBJ, or FBX models
 - Generates a Base Color texture first
-- Extracts a full available PBR set: Albedo, Normal, Height, Roughness, and AO
+- Extracts a full PBR set: Albedo, Normal, Height, Roughness, Metallic, and AO
   from the approved Base Color
 - Base Color supports up to 4K on supported quality tiers
-- Current PBR extraction uses 1K or 2K output
 - Free Blender add-on for in-viewport generation
 - Model geometry is handled locally in the browser during the core workflow
 
@@ -35,10 +34,6 @@ Painter for hero-asset polish.
 - Fine control over hero assets and custom surface details
 - Strong fit for established studio pipelines
 - Requires more hands-on work and a deeper texturing workflow
-
-Metallic extraction is currently marked as coming soon in TextureFast. If your
-pipeline needs a Metallic map today, create or refine that channel in your
-existing DCC or texturing tool.
 
 ## Which tool is faster?
 
@@ -67,10 +62,10 @@ A practical hybrid workflow is:
 
 ## Privacy-first workflow
 
-TextureFast public product copy states that the full 3D model is opened and
-processed locally in the browser during the core texturing workflow. The
-generation request may use the flattened UV layout, prompt, reference image,
-Base Color, or other derived inputs required by the selected feature.
+TextureFast uses a privacy-first workflow: the full 3D model is opened and
+processed locally in the browser during the core texturing workflow. Generation
+uses the flattened UV layout, prompt, reference image, Base Color, or other
+derived inputs required by the selected feature.
 
 Always review the current Privacy Policy and your studio's data requirements
 before uploading confidential work.
@@ -91,7 +86,7 @@ feature gates, and commercial-use terms.
 3. Upload the model and describe the desired material.
 4. Choose a style preset and quality level.
 5. Generate and review the Base Color on the model.
-6. Extract the available PBR maps.
+6. Extract the full PBR map set.
 7. Download PNG files or continue refinement in Painter.
 
 ## Bottom line
