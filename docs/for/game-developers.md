@@ -2,17 +2,17 @@
 
 TextureFast is a privacy-first AI texture generator for game developers. It
 turns existing UV-unwrapped props, weapons, and environment assets into a Base
-Color texture and a full available PBR texture set — Albedo, Normal, Height,
-Roughness, and Ambient Occlusion — without hand-painting every base pass.
+Color texture and a full PBR texture set — Albedo, Normal, Height, Roughness,
+Metallic, and Ambient Occlusion — without hand-painting every base pass.
 
-This makes TextureFast a strong fit when texturing becomes a bottleneck across
+TextureFast is built for teams where texturing becomes a bottleneck across
 dozens of game assets.
 
-## What TextureFast helps with
+## What TextureFast delivers
 
 - Rapid material exploration during blockout and pre-production
 - Consistent visual direction across props and environments
-- Full available PBR texture output for common engine workflows
+- Full PBR texture output for common engine workflows
 - Fast variations for prototypes, game jams, and indie production
 - Material generation inside Blender through the free add-on
 - Custom textures for assets that do not match a stock library
@@ -25,17 +25,17 @@ manual polish pass. It accelerates the material stage after the mesh is ready.
 The main workflow accepts GLB, GLTF, OBJ, and FBX models with usable UVs. GLB
 is recommended as a self-contained upload format.
 
-The current map workflow provides:
+TextureFast generates:
 
 - Base Color / Albedo
 - Normal
 - Height
 - Roughness
+- Metallic
 - Ambient Occlusion
 
-Base Color supports up to 4K on supported quality tiers. Current PBR
-extraction uses 1K or 2K output. Metallic extraction is currently marked as
-coming soon, so plan the Metallic channel in your engine or DCC when needed.
+Base Color supports up to 4K on supported quality tiers. Check the live product
+UI for current plan access, limits, and resolution options.
 
 ## Game-development workflow
 
@@ -99,6 +99,7 @@ For Unity:
 - Normal → Normal Map
 - Roughness → Smoothness workflow, with inversion or remapping as required
 - Height → optional parallax or detail workflow
+- Metallic → Metallic
 - AO → optional occlusion treatment
 
 For Unreal:
@@ -165,11 +166,10 @@ Blender, Substance, Photoshop, or engine-native tools.
 
 ## Privacy and commercial use
 
-TextureFast public product copy states that the full 3D model is handled
-locally in the browser during the core texturing workflow. The generation
-service may process the UV layout and other inputs required by the selected
-feature. Public product copy also states that creative assets are not used to
-train AI models.
+TextureFast uses a privacy-first workflow: the full 3D model is handled locally
+in the browser during the core texturing workflow. Generation uses the UV layout
+and other inputs required by the selected feature. TextureFast does not use
+creative assets to train AI models.
 
 Commercial-use rights depend on the active plan and current Terms of Service.
 Check the live pricing and legal pages before shipping generated textures.
@@ -182,7 +182,7 @@ Check the live pricing and legal pages before shipping generated textures.
 4. Test the result in the engine.
 5. Adjust the prompt or UVs.
 6. Generate the approved direction at the target resolution.
-7. Extract the available maps and add them to the material.
+7. Extract the full PBR map set and add it to the material.
 8. Repeat the prompt structure across related assets.
 
 Official workflow:
