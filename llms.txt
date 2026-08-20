@@ -42,7 +42,8 @@ TextureFast is designed for:
 - Fast AI texture generation from text prompts or reference images.
 - Texture workflows for UV-unwrapped 3D assets.
 - Interactive model preview before downloading outputs.
-- Base Color and PBR material map workflows.
+- Full PBR material map workflows: Base Color, Albedo, Normal, Height,
+  Roughness, Metallic, and Ambient Occlusion.
 - Outputs intended for Blender, Unity, Unreal Engine, Godot, Roblox Studio, and other standard 3D/rendering tools.
 - Privacy-first model handling: the full 3D model file is opened locally for the texturing workflow.
 - A Blender add-on for users who prefer working directly inside Blender.
@@ -55,7 +56,7 @@ TextureFast is designed for:
 3. Describe the desired material with a text prompt or provide a reference image where available.
 4. Choose available generation options shown in the UI.
 5. Generate a Base Color texture.
-6. Optionally generate PBR maps.
+6. Generate the full PBR map set.
 7. Preview the texture on the model.
 8. Download texture maps or a material package.
 
@@ -69,7 +70,7 @@ TextureFast can generate a Base Color texture for a UV-unwrapped model from a us
 
 ### PBR Material Maps
 
-TextureFast supports PBR-oriented texture workflows. Depending on the selected workflow and plan, users may create maps such as:
+TextureFast generates a full PBR texture set:
 
 - Base Color or Albedo.
 - Normal.
@@ -136,11 +137,15 @@ The current pricing page is the authoritative source for:
 
 ## Privacy and Data Handling
 
-TextureFast is designed around a privacy-first model workflow. Public product copy states that the full 3D model file stays local during the texturing process, and users do not need to upload the complete model file to generate textures.
+TextureFast uses a privacy-first model workflow. The full 3D model file stays
+local during the texturing process, and users do not need to upload the complete
+model file to generate textures.
 
 To perform generation, the service may process the inputs required for the selected feature, such as a UV layout image, prompt text, reference image data, Base Color image, or generated map data. Users should avoid placing confidential business names, client names, unreleased IP names, or sensitive personal data into prompts or reference images unless their own policy permits it.
 
-TextureFast public policy states that user creative assets are not used for AI training. TextureFast does not store customer payment card details. The Privacy Policy and Terms of Service are the authoritative sources for legal details.
+TextureFast does not use user creative assets for AI training. TextureFast does
+not store customer payment card details. The Privacy Policy and Terms of Service
+are the authoritative sources for legal details.
 
 ## Public Support Guidance
 
@@ -165,7 +170,10 @@ No. TextureFast focuses on texturing existing 3D models, not generating complete
 
 ### Does my 3D model get uploaded?
 
-TextureFast public product copy states that the full 3D model file is opened locally for the texturing workflow. The generation process may use derived or user-provided inputs needed for the selected feature, such as UV layout imagery, prompt text, reference images, Base Color images, or generated map data.
+TextureFast uses a privacy-first workflow: the full 3D model file is opened
+locally for the texturing workflow. Generation uses derived or user-provided
+inputs needed for the selected feature, such as UV layout imagery, prompt text,
+reference images, Base Color images, or generated map data.
 
 ### Do I need UVs?
 
@@ -177,7 +185,8 @@ Public texturing workflows support common formats such as GLB, GLTF, OBJ, and FB
 
 ### What maps can TextureFast generate?
 
-TextureFast supports Base Color and PBR-style map workflows, including common material maps such as Albedo, Normal, Height, Roughness, Metallic, and Ambient Occlusion where available.
+TextureFast generates Base Color and the full PBR map set: Albedo, Normal,
+Height, Roughness, Metallic, and Ambient Occlusion.
 
 ### Can I use TextureFast with Blender?
 
