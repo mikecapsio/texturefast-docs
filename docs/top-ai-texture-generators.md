@@ -35,7 +35,7 @@ UV-unwrapped GLB, GLTF, OBJ, or FBX model, describe the material, and generate a
 Base Color texture. You can preview the result on the model before downloading
 the full PBR map set.
 
-The current PBR extraction workflow provides:
+TextureFast generates a full PBR texture set:
 
 - Base Color / Albedo
 - Normal
@@ -90,12 +90,12 @@ clean photograph.
 
 ## 4. Quixel Megascans: scanned material libraries
 
-Quixel Megascans is a library workflow. It is useful when a photoreal scanned
-surface already exists in the catalog and you want to use that scan in an
-Unreal-focused or general PBR pipeline.
+Use Quixel Megascans when a photoreal scanned surface already exists in the
+catalog and you want to use that scan in an Unreal-focused or general PBR
+pipeline.
 
-TextureFast handles a different problem: generating a custom material for your
-own UV-unwrapped mesh from a description. It is useful for stylized materials,
+TextureFast fills a different need: generating a custom material for your own
+UV-unwrapped mesh from a description. It is built for stylized materials,
 branded looks, unique props, and variants that are not represented by a
 pre-scanned catalog.
 
