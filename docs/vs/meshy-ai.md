@@ -1,12 +1,15 @@
 # TextureFast vs Meshy.ai
 
-TextureFast and Meshy.ai are useful at different stages of a 3D workflow.
+TextureFast is a privacy-first AI text-to-texture tool for existing,
+UV-unwrapped models. Meshy.ai generates complete 3D assets. They are useful at
+different stages of a 3D workflow.
 
 ## Short answer
 
+TextureFast is the better fit when you already control the topology and UV
+layout and need a private, prompt-driven full available PBR texture set.
 Meshy.ai generates complete 3D assets from text or images, including geometry
-and appearance. TextureFast focuses on texturing an existing UV-unwrapped model
-whose topology and UV layout you already control.
+and appearance.
 
 Use Meshy to bootstrap a concept mesh. Use TextureFast when the mesh exists and
 you need a new, consistent, or higher-quality material direction.
@@ -19,7 +22,8 @@ you need a new, consistent, or higher-quality material direction.
 - Requires GLB, GLTF, OBJ, or FBX input with usable UVs
 - Generates Base Color from a prompt or supported reference input
 - Provides interactive model preview
-- Extracts Albedo, Normal, Height, Roughness, and AO from the approved Base Color
+- Extracts a full available PBR set: Albedo, Normal, Height, Roughness, and AO
+  from the approved Base Color
 - Base Color supports up to 4K on supported quality tiers
 - Current PBR extraction uses 1K or 2K output
 - Includes a free Blender add-on
@@ -63,7 +67,7 @@ TextureFast gives you:
 - A dedicated Base Color and PBR extraction workflow
 - A Blender-first option through the free add-on
 
-## Privacy
+## Privacy-first workflow
 
 TextureFast public product copy states that the full model is loaded locally in
 the browser during the core texturing workflow. The generation request may use
