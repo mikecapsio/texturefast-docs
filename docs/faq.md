@@ -90,7 +90,7 @@ TextureFast generates a full PBR texture set:
 ### How do I get Normal or Roughness maps?
 
 Generate a Base Color first. Then open the PBR Material workflow, choose the
-available maps and target resolution, and generate them individually or through
+required maps and target resolution, and generate them individually or through
 one-click full material generation on eligible plans.
 
 ### What resolution can I use?
