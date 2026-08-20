@@ -12,9 +12,9 @@ real-world materials and assets, and is a strong choice when the exact
 photoreal surface you need already exists in the catalog.
 
 TextureFast generates a custom material for your own UV-unwrapped model from a
-text description or supported reference input. It is useful when you need a
-specific style, branded palette, stylized finish, or material variant that is
-not available as a scan.
+text description or supported reference input. It is built for specific styles,
+branded palettes, stylized finishes, and material variants that are not
+available as scans.
 
 ## Main differences
 
@@ -26,7 +26,7 @@ not available as a scan.
 - Extracts a full PBR set: Albedo, Normal, Height, Roughness, Metallic, and AO
 - Base Color supports up to 4K on supported quality tiers
 - Includes style presets and a free Blender add-on
-- Useful for unique, stylized, or art-directed material variants
+- Built for unique, stylized, or art-directed material variants
 
 ### Quixel Megascans
 
@@ -39,8 +39,8 @@ not available as a scan.
 
 ## Is TextureFast a replacement for Megascans?
 
-Not in every situation. Megascans remains useful when you want scan fidelity and
-the catalog contains the surface you need. TextureFast is useful for the gaps:
+Not in every situation. Megascans remains the right choice when you want scan
+fidelity and the catalog contains the surface you need. TextureFast fills the gaps:
 custom hero props, stylized art direction, branded looks, and materials that
 are difficult to find in a fixed library.
 
