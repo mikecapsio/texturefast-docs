@@ -1,12 +1,15 @@
 # TextureFast vs Quixel Megascans
 
-TextureFast and Quixel Megascans solve different material-sourcing problems.
+TextureFast is a privacy-first AI texture generator for existing UV-unwrapped
+models. Quixel Megascans is a scan-library workflow. They solve different
+material-sourcing problems.
 
 ## Short answer
 
-Megascans is a library of scanned real-world materials and assets. It is a
-strong choice when the exact photoreal surface you need already exists in the
-catalog.
+TextureFast is the better fit when you need a custom, prompt-driven full
+available PBR texture set on your own model. Megascans is a library of scanned
+real-world materials and assets, and is a strong choice when the exact
+photoreal surface you need already exists in the catalog.
 
 TextureFast generates a custom material for your own UV-unwrapped model from a
 text description or supported reference input. It is useful when you need a
@@ -20,7 +23,7 @@ not available as a scan.
 - Generates a material from a prompt on your existing UV layout
 - Accepts GLB, GLTF, OBJ, and FBX models with usable UVs
 - Generates Base Color first and previews it on the model
-- Extracts Albedo, Normal, Height, Roughness, and AO
+- Extracts a full available PBR set: Albedo, Normal, Height, Roughness, and AO
 - Base Color supports up to 4K on supported quality tiers
 - Current PBR extraction uses 1K or 2K output
 - Includes style presets and a free Blender add-on
@@ -77,7 +80,7 @@ prompt can describe a custom variant such as:
 - Scratched matte powder-coated steel
 - Hand-painted wood with an intentionally simplified grain
 
-## Privacy and licensing
+## Privacy-first workflow and licensing
 
 TextureFast public product copy states that the full 3D model is opened and
 processed locally in the browser during the core texturing workflow. Review the
