@@ -7,7 +7,7 @@ different stages of a 3D workflow.
 ## Short answer
 
 TextureFast is the better fit when you already control the topology and UV
-layout and need a private, prompt-driven full available PBR texture set.
+layout and need a private, prompt-driven full PBR texture set.
 Meshy.ai generates complete 3D assets from text or images, including geometry
 and appearance.
 
@@ -22,10 +22,9 @@ you need a new, consistent, or higher-quality material direction.
 - Requires GLB, GLTF, OBJ, or FBX input with usable UVs
 - Generates Base Color from a prompt or supported reference input
 - Provides interactive model preview
-- Extracts a full available PBR set: Albedo, Normal, Height, Roughness, and AO
+- Extracts a full PBR set: Albedo, Normal, Height, Roughness, Metallic, and AO
   from the approved Base Color
 - Base Color supports up to 4K on supported quality tiers
-- Current PBR extraction uses 1K or 2K output
 - Includes a free Blender add-on
 
 ### Meshy.ai
@@ -48,7 +47,7 @@ Yes, if the exported model has usable UVs.
 3. Clean the mesh or create a better UV unwrap if necessary.
 4. Upload the UV-unwrapped model to TextureFast.
 5. Describe the desired finish and generate a new Base Color.
-6. Extract the available PBR maps and download the PNG output.
+6. Extract the full PBR map set and download the PNG output.
 
 If the automatic unwrap is poor, fix it before generating. TextureFast maps
 the result to the UV layout you provide.
@@ -69,9 +68,9 @@ TextureFast gives you:
 
 ## Privacy-first workflow
 
-TextureFast public product copy states that the full model is loaded locally in
-the browser during the core texturing workflow. The generation request may use
-the UV layout and other selected inputs needed to produce the texture.
+TextureFast uses a privacy-first workflow: the full model is loaded locally in
+the browser during the core texturing workflow. Generation uses the UV layout
+and other selected inputs needed to produce the texture.
 
 When comparing services, review each provider's current privacy policy,
 especially for complete 3D uploads, reference images, and generated assets.
