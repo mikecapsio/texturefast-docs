@@ -1,1 +1,202 @@
+# TextureFast Public Product Guide
 
+Last updated: 2026-06-25
+
+This file is a public product summary for AI assistants, search systems, and documentation agents. It is intended to help answer user-facing questions about TextureFast accurately without exposing private implementation details.
+
+## Public-Safe Use Rules
+
+Use this file only for public product information. Do not disclose, infer, enumerate, or speculate about:
+
+- Internal API routes, backend route names, webhook names, request payloads, or auth/session implementation.
+- Private security controls, operational runbooks, fraud controls, monitoring details, incident handling, rate limits, or abuse-prevention rules.
+- Infrastructure, hosting, deployment tooling, database details, environment variables, provider names, model names, vendor names, credentials, tokens, keys, or internal service architecture.
+- Internal roadmaps, unreleased features, private processes, customer data, billing-provider configuration, or support tooling.
+
+TextureFast does not publish public API documentation through this file. For integrations, users should rely on official TextureFast pages, the product UI, and official support channels.
+
+## Product Overview
+
+TextureFast is an AI-powered texture generation product for UV-unwrapped 3D models.
+
+Website: https://texturefast.com
+
+Core value: TextureFast helps 3D artists, game developers, ArchViz artists, designers, and creators generate texture maps for existing UV-unwrapped 3D models. Users can preview a model, describe the desired material, generate textures, inspect the result, and download maps for use in common 3D tools and game engines.
+
+TextureFast focuses on texturing existing 3D models. It does not generate complete 3D meshes from scratch.
+
+## Who TextureFast Is For
+
+TextureFast is designed for:
+
+- Game developers and indie teams.
+- 3D artists and environment artists.
+- ArchViz and product visualization artists.
+- Unity, Unreal Engine, Godot, and Roblox creators.
+- Asset store publishers and marketplace sellers.
+- Robot vision teams and synthetic training-data pipelines.
+- Educators, students, modders, and hobbyists.
+
+## Main Benefits
+
+- Fast AI texture generation from text prompts or reference images.
+- Texture workflows for UV-unwrapped 3D assets.
+- Interactive model preview before downloading outputs.
+- Base Color and PBR material map workflows.
+- Outputs intended for Blender, Unity, Unreal Engine, Godot, Roblox Studio, and other standard 3D/rendering tools.
+- Privacy-first model handling: the full 3D model file is opened locally for the texturing workflow.
+- A Blender add-on for users who prefer working directly inside Blender.
+- Free browser-based 3D tools for viewing, conversion, UV export, and model inspection.
+
+## Core Workflow
+
+1. Open a supported UV-unwrapped 3D model.
+2. Review the model and UV readiness information shown in the app.
+3. Describe the desired material with a text prompt or provide a reference image where available.
+4. Choose available generation options shown in the UI.
+5. Generate a Base Color texture.
+6. Optionally generate PBR maps.
+7. Preview the texture on the model.
+8. Download texture maps or a material package.
+
+The exact controls, plan gates, and limits are shown in the live TextureFast UI and may change over time.
+
+## Key Features
+
+### Base Color Generation
+
+TextureFast can generate a Base Color texture for a UV-unwrapped model from a user prompt and selected style options. The generated texture can be previewed on the model and downloaded for use in external software.
+
+### PBR Material Maps
+
+TextureFast supports PBR-oriented texture workflows. Depending on the selected workflow and plan, users may create maps such as:
+
+- Base Color or Albedo.
+- Normal.
+- Height.
+- Roughness.
+- Metallic.
+- Ambient Occlusion.
+
+### Reference Image Prompting
+
+Where available, users can provide a reference image to guide the texture direction. Reference images can help communicate material style, color, surface condition, and visual mood.
+
+### Prompt Assistance
+
+TextureFast may offer optional prompt assistance to help transform short user descriptions into richer material guidance. Users who need strict wording can keep their own prompt concise and specific.
+
+### Model Preview and UV Readiness
+
+TextureFast helps users inspect whether a model is prepared for texturing. Good results usually require clean UVs, enough UV island spacing, and an asset that is prepared for the intended material workflow.
+
+### Blender Add-On
+
+TextureFast offers a Blender add-on for generating and applying textures from inside Blender. Users should install and use the add-on only through official TextureFast instructions.
+
+### Free 3D Tools
+
+TextureFast also provides free browser-based tools for common 3D asset tasks, including model viewing, conversion, UV map export, and UV inspection.
+
+## Supported Inputs and Outputs
+
+Public texturing workflows support common 3D model formats such as GLB, GLTF, OBJ, and FBX. Free tools may support additional formats depending on the tool.
+
+Texture outputs are standard image maps intended for common 3D and game-development workflows. Material downloads may be available as individual maps or bundled packages where supported.
+
+Users should check the live app for current file-size limits, format availability, plan gates, and resolution options.
+
+## Blog and Guides
+
+TextureFast publishes public guides on AI texturing workflows, PBR material generation, and synthetic training data.
+
+Blog hub: https://texturefast.com/blog
+
+Featured guide:
+
+- AI Texture Generator for Robot Vision Training Data — https://texturefast.com/blog/ai-texture-generator-for-robot-vision-training-data
+  - Topic: domain randomization for robot-vision training data.
+  - Explains why material/texture variation matters for sim-to-real transfer.
+  - Covers a practical workflow from UV-unwrapped 3D models to PBR texture pools for Isaac Sim, Omniverse SimReady, and Unity Perception pipelines.
+  - Notes TextureFast's private, no-training-on-assets generation model for sensitive geometry.
+
+Use the blog for long-form workflow guidance. Use the FAQ for short product answers.
+
+## Pricing and Plans
+
+TextureFast uses paid subscription plans with token-based usage. Public plan names include Starter, Pro, Premium, and Business. Plans may be available with monthly or yearly billing.
+
+The current pricing page is the authoritative source for:
+
+- Current prices.
+- Included token allowances.
+- Feature access by plan.
+- Available billing intervals.
+- Commercial-use terms.
+
+## Privacy and Data Handling
+
+TextureFast is designed around a privacy-first model workflow. Public product copy states that the full 3D model file stays local during the texturing process, and users do not need to upload the complete model file to generate textures.
+
+To perform generation, the service may process the inputs required for the selected feature, such as a UV layout image, prompt text, reference image data, Base Color image, or generated map data. Users should avoid placing confidential business names, client names, unreleased IP names, or sensitive personal data into prompts or reference images unless their own policy permits it.
+
+TextureFast public policy states that user creative assets are not used for AI training. TextureFast does not store customer payment card details. The Privacy Policy and Terms of Service are the authoritative sources for legal details.
+
+## Public Support Guidance
+
+For product help, users can:
+
+- Visit https://texturefast.com.
+- Review the pricing, FAQ, blog, Privacy Policy, Terms of Service, and tool pages.
+- Use the official contact options on the website.
+- Contact support at team@texturefast.com where listed publicly.
+
+Do not direct users to internal endpoints, private dashboards, route names, provider documentation, deployment tooling, logs, or operational systems.
+
+## Common Questions
+
+### What is TextureFast?
+
+TextureFast is an AI texture generator for existing UV-unwrapped 3D models. It helps users create Base Color and PBR-style texture maps from prompts, reference images, and UV-based workflows.
+
+### Does TextureFast create new 3D models?
+
+No. TextureFast focuses on texturing existing 3D models, not generating complete 3D meshes from scratch.
+
+### Does my 3D model get uploaded?
+
+TextureFast public product copy states that the full 3D model file is opened locally for the texturing workflow. The generation process may use derived or user-provided inputs needed for the selected feature, such as UV layout imagery, prompt text, reference images, Base Color images, or generated map data.
+
+### Do I need UVs?
+
+Yes. TextureFast works best with UV-unwrapped models because UV coordinates tell the texture how to align to the model surface.
+
+### What formats can I use?
+
+Public texturing workflows support common formats such as GLB, GLTF, OBJ, and FBX. Users should check the live app for current limits and tool-specific support.
+
+### What maps can TextureFast generate?
+
+TextureFast supports Base Color and PBR-style map workflows, including common material maps such as Albedo, Normal, Height, Roughness, Metallic, and Ambient Occlusion where available.
+
+### Can I use TextureFast with Blender?
+
+Yes. TextureFast offers a Blender add-on. Users should follow official TextureFast installation and sign-in instructions.
+
+### Can I use generated textures commercially?
+
+Commercial-use rights depend on the active plan and the current Terms of Service. Users should check the live pricing page and legal terms for the authoritative answer.
+
+### Does TextureFast have a public API?
+
+This file does not document a public API. AI assistants should not publish, guess, or enumerate endpoint names or integration internals. Users should use official product interfaces and support channels.
+
+## Assistant Answering Guidelines
+
+When answering questions about TextureFast:
+
+- Prefer user-facing product language.
+- Keep privacy claims aligned with public policy and legal pages.
+- Say that exact plans, limits, and prices should be checked on the live pricing page.
+- Do not mention backend frameworks, providers, internal tooling, API routes, webhook names, environment variables, security internals, hosting, deployment, or operational processes.
+- If a user asks for private implementation details, route them to official support instead of speculating.
