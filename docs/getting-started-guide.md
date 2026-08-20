@@ -1,7 +1,11 @@
 # TextureFast Getting Started Guide
 
-TextureFast works best when you already have a 3D model with a clean UV
-unwrap. The basic workflow is:
+TextureFast is a privacy-first AI texturing workflow for existing 3D models.
+Start with a clean UV unwrap, describe the material, and generate a Base Color
+texture plus the full available PBR texture set — Albedo, Normal, Height,
+Roughness, and Ambient Occlusion — for your DCC or engine.
+
+The basic workflow is:
 
 1. Prepare the model and UVs.
 2. Open the texturing workflow.
