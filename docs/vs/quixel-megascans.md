@@ -6,8 +6,8 @@ material-sourcing problems.
 
 ## Short answer
 
-TextureFast is the better fit when you need a custom, prompt-driven full
-available PBR texture set on your own model. Megascans is a library of scanned
+TextureFast is the better fit when you need a custom, prompt-driven full PBR
+texture set on your own model. Megascans is a library of scanned
 real-world materials and assets, and is a strong choice when the exact
 photoreal surface you need already exists in the catalog.
 
@@ -23,9 +23,8 @@ not available as a scan.
 - Generates a material from a prompt on your existing UV layout
 - Accepts GLB, GLTF, OBJ, and FBX models with usable UVs
 - Generates Base Color first and previews it on the model
-- Extracts a full available PBR set: Albedo, Normal, Height, Roughness, and AO
+- Extracts a full PBR set: Albedo, Normal, Height, Roughness, Metallic, and AO
 - Base Color supports up to 4K on supported quality tiers
-- Current PBR extraction uses 1K or 2K output
 - Includes style presets and a free Blender add-on
 - Useful for unique, stylized, or art-directed material variants
 
@@ -61,7 +60,7 @@ Yes, as long as the scanned mesh has a usable UV unwrap.
 4. Upload the UV-unwrapped model to TextureFast.
 5. Prompt a new surface, such as clean PBR concrete, stylized paint, or
    weathered metal.
-6. Preview the result and download the available PNG maps.
+6. Preview the result and download the full PBR PNG map set.
 
 TextureFast creates a new material direction. It does not preserve the scan's
 original albedo pixel-for-pixel. Keep the original scan texture when exact
@@ -82,7 +81,7 @@ prompt can describe a custom variant such as:
 
 ## Privacy-first workflow and licensing
 
-TextureFast public product copy states that the full 3D model is opened and
+TextureFast uses a privacy-first workflow: the full 3D model is opened and
 processed locally in the browser during the core texturing workflow. Review the
 current Privacy Policy before using confidential geometry.
 
