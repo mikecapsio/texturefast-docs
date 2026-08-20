@@ -1,15 +1,18 @@
 # TextureFast for Game Developers
 
-Texturing can become a bottleneck when a game needs dozens of props,
-environment pieces, weapons, or stylized assets. TextureFast helps game
-developers explore material directions on existing UV-unwrapped models without
-hand-painting every base pass.
+TextureFast is a privacy-first AI texture generator for game developers. It
+turns existing UV-unwrapped props, weapons, and environment assets into a Base
+Color texture and a full available PBR texture set — Albedo, Normal, Height,
+Roughness, and Ambient Occlusion — without hand-painting every base pass.
+
+This makes TextureFast a strong fit when texturing becomes a bottleneck across
+dozens of game assets.
 
 ## What TextureFast helps with
 
 - Rapid material exploration during blockout and pre-production
 - Consistent visual direction across props and environments
-- PBR-oriented texture output for common engine workflows
+- Full available PBR texture output for common engine workflows
 - Fast variations for prototypes, game jams, and indie production
 - Material generation inside Blender through the free add-on
 - Custom textures for assets that do not match a stock library
