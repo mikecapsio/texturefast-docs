@@ -1,63 +1,57 @@
 # TextureFast Getting Started Guide
 
-TextureFast is a privacy-first AI texturing workflow for existing 3D models.
-Start with a clean UV unwrap, describe the material, and generate a Base Color
-texture plus a full PBR texture set — Albedo, Normal, Height, Roughness,
-Metallic, and Ambient Occlusion — for your DCC or engine.
+TextureFast is a privacy-first AI texturing workflow for UV-unwrapped 3D models. The model stays in your browser, and the AI sees only the UV map. Start with a clean UV unwrap, describe the material, and generate a Base Color texture plus a full PBR texture set — Albedo, Normal, Height, Roughness, Metallic, and Ambient Occlusion — for your DCC or engine.
 
 The basic workflow is:
 
 1. Prepare the model and UVs.
-2. Open the texturing workflow.
+2. Open the model in TextureFast. It stays in the browser.
 3. Describe the material.
 4. Generate and review Base Color.
 5. Extract the full PBR map set.
-6. Download and import them into your DCC or engine.
+6. Download and import the maps into your DCC or engine.
 
 ## Before you start
 
 Prepare:
 
 - A TextureFast account with available plan usage or tokens
-- A UV-unwrapped 3D model
+- A properly UV-unwrapped 3D model with clean UVs
 - A clear material direction
 - A target application such as Blender, Unity, Unreal Engine, or Godot
 
-The main workflow accepts GLB, GLTF, OBJ, and FBX. GLB is recommended when
-you want a single self-contained file.
+The main workflow accepts GLB, GLTF, OBJ, and FBX, up to 100 MB in the current web workflow. GLB is a good choice when you want a single self-contained file. Check the live UI if you are near that limit.
 
 ## Step 1: Prepare the model
 
-UV unwrapping flattens the surface of a 3D model into a 2D layout. TextureFast
-uses that layout to place the generated image correctly.
+UV unwrapping flattens the surface of a 3D model into a 2D layout. TextureFast paints on that layout, so UV quality decides texture quality.
 
-Before exporting:
+Before you export:
 
 - Check that every visible surface has UV coordinates.
 - Reduce stretching where detail matters.
 - Avoid unwanted overlaps on areas that need unique texture detail.
-- Leave sensible spacing between UV islands.
+- Leave sensible spacing between UV islands so color does not bleed.
 - Keep texel density reasonably consistent across the asset.
-- Preview the model in your DCC before uploading.
+- Place seams where they are hard to see.
+- Preview the model in your DCC before you open it in TextureFast.
 
-TextureFast does not repair bad topology or create missing UVs. Fix those
-issues in Blender, Maya, 3ds Max, or another DCC first.
+A free check that costs no tokens: https://texturefast.com/tools/uv-map-inspector
 
-## Step 2: Upload the model
+TextureFast does not repair bad topology, create missing UVs, or generate meshes. Fix those issues in Blender, Maya, 3ds Max, or another DCC first.
 
-Open the TextureFast texturing workflow and select your model file. The browser
-loads the model for local preview and UV handling.
+## Step 2: Open the model
 
-After upload:
+Open the TextureFast texturing workflow and select your model file. The browser reads the model locally for the preview and UV extraction. The file is not uploaded. The AI receives the UV map and your prompt, not the mesh.
+
+After the model opens:
 
 1. Confirm that the model appears correctly in the viewport.
 2. Check the UV readiness information if shown.
 3. Give the asset a useful name.
 4. Choose a style and quality option appropriate for the asset.
 
-The core workflow is designed around local model handling. The generation
-request may use the UV layout and other derived inputs required by the selected
-feature.
+If you work in Blender, the free add-on can generate from the 3D Viewport instead. The mesh stays in Blender. See https://texturefast.com/blender-addon.
 
 ## Step 3: Write a useful material prompt
 
@@ -77,44 +71,34 @@ Weak prompt:
 
 More useful prompt:
 
-> Brushed stainless steel with fine horizontal grain, soft satin reflections,
-> light edge wear, and darker grime in recessed areas.
+> Brushed stainless steel with fine horizontal grain, soft satin reflections, light edge wear, and darker grime in recessed areas.
 
 For a game asset, include the visual direction:
 
-> Stylized hand-painted stone with warm grey blocks, teal mortar, simplified
-> cracks, and readable shapes for a mobile fantasy game.
+> Stylized hand-painted stone with warm grey blocks, teal mortar, simplified cracks, and readable shapes for a mobile fantasy game.
 
 For ArchViz:
 
-> Wide-plank European oak flooring with a natural oil finish, subtle grain,
-> warm honey-brown color, and light foot-traffic wear.
+> Wide-plank European oak flooring with a natural oil finish, subtle grain, warm honey-brown color, and light foot-traffic wear.
 
-Keep prompt language consistent across a group of assets when you want a
-cohesive art direction.
+Keep prompt language consistent across a group of assets when you want a cohesive art direction. The same UV map can take as many new looks as your token allowance covers. Avoid confidential client or project names in the prompt unless your own policy allows it.
 
 ## Step 4: Choose a style and quality
 
-Style presets can guide the visual direction across generations. Examples
-include:
+Style presets can guide the visual direction across generations. Examples include:
 
 - AAA Photorealistic
 - Handpainted
 - Pixel Art
 - AAA Stylized
 
-Choose quality and resolution based on where the asset will appear. A background
-prop may not need the same setting as a first-person weapon or a close-up
-ArchViz hero asset.
+Quality tiers are Junior, Mid, and Senior. Choose quality and resolution based on where the asset will appear. A background prop may not need the same setting as a first-person weapon or a close-up ArchViz hero asset.
 
-Base Color supports up to 4K on supported quality tiers. Junior Base Color
-generation is limited to 1K according to the current product configuration.
-Check the live UI for the current plan matrix.
+Base Color supports up to 4K on supported quality tiers. Check the live UI for the current plan matrix, because resolution access can change.
 
 ## Step 5: Generate Base Color
 
-Generate the Base Color texture first. Then inspect it on the model, not only
-as a flat image.
+Generate the Base Color texture first. Then inspect it on the model, not only as a flat image.
 
 Check:
 
@@ -124,13 +108,11 @@ Check:
 - Whether the scale of the pattern feels right
 - Whether the colors work under the target lighting
 
-If the direction is wrong, revise the prompt and generate again before spending
-tokens on secondary map extraction.
+If the direction is wrong, revise the prompt and generate again before spending tokens on secondary map extraction. Each new look uses the same local model.
 
 ## Step 6: Extract PBR maps
 
-After approving Base Color, open the PBR Material workflow. TextureFast
-generates:
+After approving Base Color, open the PBR Material workflow. TextureFast generates:
 
 - Albedo / Base Color
 - Normal
@@ -139,18 +121,13 @@ generates:
 - Metallic
 - Ambient Occlusion
 
-You can generate maps individually or use one-click full material generation on
-eligible plans. Check the live product UI for current plan access, limits, and
-resolution options.
+You can generate maps individually or use one-click full material generation on eligible plans. Check the live product UI for current plan access, limits, and resolution options.
 
 ## Step 7: Download the maps
 
-Download individual PNG maps or a material package where the current workflow
-supports it. PNG output is intended to work with common DCC and game-engine
-pipelines.
+Download individual PNG maps or a material package where the current workflow supports it. PNG output is intended to work with common DCC and game-engine pipelines.
 
-Keep map names organized by asset and material. For batch work, use a consistent
-folder and naming convention before importing into your project.
+Keep map names organized by asset and material. For batch work, use a consistent folder and naming convention before importing into your project.
 
 ## Step 8: Import into Blender
 
@@ -163,8 +140,7 @@ In Blender, assign the maps to the Principled BSDF:
 - Height → Bump or displacement workflow if needed
 - AO → optional occlusion treatment depending on the shader
 
-The free TextureFast Blender add-on can generate and wire maps inside Blender
-without a browser round trip:
+The free TextureFast Blender add-on can generate and wire maps inside Blender. The mesh stays on your machine:
 
 1. Download the ZIP from https://texturefast.com/blender-addon.
 2. Install it through Blender Preferences.
@@ -182,12 +158,10 @@ For a Unity URP or HDRP workflow:
 3. Create a Lit material.
 4. Assign Base Color to Base Map.
 5. Assign Normal to the Normal Map slot.
-6. Map Roughness according to your shader setup. Unity commonly uses
-   Smoothness, so invert or remap Roughness when required.
+6. Map Roughness according to your shader setup. Unity commonly uses Smoothness, so invert or remap Roughness when required.
 7. Use Height and AO only when your shader and performance budget support them.
 
-Use lower resolutions for distant or mobile assets and reserve higher
-resolutions for hero objects.
+Use lower resolutions for distant or mobile assets and reserve higher resolutions for hero objects.
 
 ## Step 10: Import into Unreal Engine
 
@@ -200,14 +174,11 @@ For Unreal Engine:
 5. Connect Base Color, Normal, and Roughness to the appropriate inputs.
 6. Add Height or AO according to the features in your material.
 
-Material Instances make it easier to apply the same structure across many
-props. Test Roughness under the lighting used in the level rather than judging
-it only from a thumbnail.
+Material Instances make it easier to apply the same structure across many props. Test Roughness under the lighting used in the level rather than judging it only from a thumbnail.
 
 ## Step 11: Iterate and refine
 
-TextureFast is built for exploring directions quickly. Final validation still
-belongs in the target application.
+TextureFast is built for exploring directions quickly on a model you keep locally. Final validation still belongs in the target application.
 
 Use a loop:
 
@@ -218,35 +189,29 @@ Use a loop:
 5. Generate the approved direction at the required resolution.
 6. Extract only the maps needed by the final shader.
 
-Hero assets may still benefit from hand-painted refinement in Blender,
-Substance, Photoshop, or another texture editor.
+Hero assets may still benefit from hand-painted refinement in Blender, Substance, Photoshop, or another texture editor.
 
 ## Common problems
 
 ### The model has no texture or generation fails
 
-Check that the model has valid UV coordinates and that the exported file
-actually includes them.
+Check that the model has valid UV coordinates and that the exported file actually includes them.
 
 ### The texture is stretched
 
-Improve the UV unwrap and texel-density distribution. TextureFast follows the
-UV layout you provide.
+Improve the UV unwrap and texel-density distribution. TextureFast follows the UV layout you provide. The free UV Map Inspector can show the layout before you spend tokens.
 
 ### The material looks noisy
 
-Simplify the prompt, describe larger readable forms, and inspect the model at
-the distance where it will be used.
+Simplify the prompt, describe larger readable forms, and inspect the model at the distance where it will be used.
 
 ### The result looks good flat but bad in 3D
 
-Rotate the model and check seams, scale, and detail placement. Always judge a
-texture on the model and in the target renderer.
+Rotate the model and check seams, scale, and detail placement. Always judge a texture on the model and in the target renderer.
 
 ### A required map is missing
 
-Check current plan access and the live PBR Material tab if a map or resolution
-option is unavailable.
+Check current plan access and the live PBR Material tab if a map or resolution option is unavailable.
 
 ## Next steps
 
@@ -255,3 +220,4 @@ option is unavailable.
 - [TextureFast for ArchViz artists](for/archviz-artists.md)
 - Official Blender add-on page: https://texturefast.com/blender-addon
 - Official pricing page: https://texturefast.com/pricing
+- Privacy FAQ: https://texturefast.com/faq/are-my-models-and-prompts-kept-private
